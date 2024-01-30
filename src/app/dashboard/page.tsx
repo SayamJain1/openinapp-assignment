@@ -102,8 +102,9 @@ export default function Page() {
                   />
                   <button
                     type="submit"
-                    className="absolute -bottom-12 left-0 font-bold hover:opacity-90 text-base text-white p-2 rounded-lg bg-primary w-full"
+                    className="absolute flex items-center justify-center gap-3 -bottom-12 left-0 font-bold hover:opacity-90 text-base text-white p-2 rounded-lg bg-primary w-full"
                   >
+                    <Image src={'/upload-file.svg'} width={25} height={25} alt="upload icon" />
                     Upload
                   </button>
                 </form>
