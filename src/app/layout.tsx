@@ -1,8 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Figtree, Lato, Montserrat, Nunito } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-lato",
+});
+
+const nunito = Nunito({
+  weight: ["200", "300", "400", "500", "600", "700", "1000"],
+  subsets: ["latin"],
+  variable: "--font-nunito",
+});
+
+const figtree = Figtree({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-figtree",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +37,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${montserrat.variable} ${lato.variable} ${nunito.variable} ${figtree.variable} font-sans bg-[#F8FAFF]`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
